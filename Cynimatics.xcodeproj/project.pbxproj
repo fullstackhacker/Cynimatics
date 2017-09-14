@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		450D118C1F6A615900E8C605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D118B1F6A615900E8C605 /* AppDelegate.swift */; };
-		450D118E1F6A615900E8C605 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D118D1F6A615900E8C605 /* ViewController.swift */; };
 		450D11911F6A615900E8C605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450D118F1F6A615900E8C605 /* Main.storyboard */; };
 		450D11931F6A615900E8C605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450D11921F6A615900E8C605 /* Assets.xcassets */; };
 		450D11961F6A615900E8C605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450D11941F6A615900E8C605 /* LaunchScreen.storyboard */; };
 		450D11A11F6A615900E8C605 /* CynimaticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11A01F6A615900E8C605 /* CynimaticsTests.swift */; };
 		450D11AC1F6A615900E8C605 /* CynimaticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11AB1F6A615900E8C605 /* CynimaticsUITests.swift */; };
+		450D11BA1F6A623000E8C605 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11B91F6A623000E8C605 /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		450D11881F6A615900E8C605 /* Cynimatics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cynimatics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450D118B1F6A615900E8C605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		450D118D1F6A615900E8C605 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		450D11901F6A615900E8C605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		450D11921F6A615900E8C605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		450D11951F6A615900E8C605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		450D11A71F6A615900E8C605 /* CynimaticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CynimaticsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450D11AB1F6A615900E8C605 /* CynimaticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CynimaticsUITests.swift; sourceTree = "<group>"; };
 		450D11AD1F6A615900E8C605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		450D11B91F6A623000E8C605 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				450D118B1F6A615900E8C605 /* AppDelegate.swift */,
-				450D118D1F6A615900E8C605 /* ViewController.swift */,
 				450D118F1F6A615900E8C605 /* Main.storyboard */,
 				450D11921F6A615900E8C605 /* Assets.xcassets */,
 				450D11941F6A615900E8C605 /* LaunchScreen.storyboard */,
 				450D11971F6A615900E8C605 /* Info.plist */,
+				450D11B91F6A623000E8C605 /* MoviesViewController.swift */,
 			);
 			path = Cynimatics;
 			sourceTree = "<group>";
@@ -259,8 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450D118E1F6A615900E8C605 /* ViewController.swift in Sources */,
 				450D118C1F6A615900E8C605 /* AppDelegate.swift in Sources */,
+				450D11BA1F6A623000E8C605 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
