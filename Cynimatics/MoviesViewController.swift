@@ -12,12 +12,44 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var moviesTableView: UITableView!
     
+    var movies: [Movie] = []
+    
+    func fetchNowPlayingMovies(next: @escaping (([Movie]) -> Void)) {
+        let apiKey: String = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
+        let url: URL = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
+        let request: URLRequest = URLRequest(url: url)
+        let session: URLSession = URLSession(
+            configuration: URLSessionConfiguration.default,
+            delegate: nil,
+            delegateQueue: OperationQueue.main
+        )
+        
+        let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, err) in
+            if let data = data {
+                if let responseDict = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                    if let moviesList = responseDict["results"] as? [NSDictionary] {
+                        let movies = moviesList.map({ (movieDict) -> Movie in
+                            return Movie(from: movieDict)
+                        })
+                        next(movies)
+                    }
+                }
+                
+            }
+        }
+        task.resume()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         moviesTableView.dataSource = self
         moviesTableView.delegate = self
 
+        fetchNowPlayingMovies { (movies) in
+            self.movies = movies
+        }
+        
         // Do any additional setup after loading the view.
     }
 
