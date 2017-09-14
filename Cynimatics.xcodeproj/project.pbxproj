@@ -15,6 +15,7 @@
 		450D11AC1F6A615900E8C605 /* CynimaticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11AB1F6A615900E8C605 /* CynimaticsUITests.swift */; };
 		450D11BA1F6A623000E8C605 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11B91F6A623000E8C605 /* MoviesViewController.swift */; };
 		450D11BE1F6A6DD000E8C605 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11BD1F6A6DD000E8C605 /* Movie.swift */; };
+		450D11C01F6A71FA00E8C605 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 450D11BF1F6A71FA00E8C605 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		450D11AD1F6A615900E8C605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		450D11B91F6A623000E8C605 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		450D11BD1F6A6DD000E8C605 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Cynimatics/Movie.swift; sourceTree = "<group>"; };
+		450D11BF1F6A71FA00E8C605 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				450D11BD1F6A6DD000E8C605 /* Movie.swift */,
+				450D11BF1F6A71FA00E8C605 /* README.md */,
 				450D118A1F6A615900E8C605 /* Cynimatics */,
 				450D119F1F6A615900E8C605 /* CynimaticsTests */,
 				450D11AA1F6A615900E8C605 /* CynimaticsUITests */,
@@ -264,6 +267,7 @@
 			files = (
 				450D118C1F6A615900E8C605 /* AppDelegate.swift in Sources */,
 				450D11BA1F6A623000E8C605 /* MoviesViewController.swift in Sources */,
+				450D11C01F6A71FA00E8C605 /* README.md in Sources */,
 				450D11BE1F6A6DD000E8C605 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
