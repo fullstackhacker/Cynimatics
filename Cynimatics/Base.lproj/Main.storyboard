@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="670.5" y="169.5"/>
         </scene>
-        <!--Movie View Controller-->
+        <!--Movie-->
         <scene sceneID="etf-qZ-2dI">
             <objects>
                 <viewController id="z43-Ub-IPm" customClass="MovieViewController" customModule="Cynimatics" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zum-0A-bUj"/>
+                    <navigationItem key="navigationItem" title="Movie" id="Zum-0A-bUj"/>
                     <connections>
                         <outlet property="overviewLabel" destination="Z9d-pz-qTY" id="0Al-aH-Gxd"/>
                         <outlet property="posterImageView" destination="8Oi-ez-fy7" id="Z87-Xe-gjf"/>
