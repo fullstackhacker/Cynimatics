@@ -48,6 +48,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
         fetchNowPlayingMovies { (movies) in
             self.movies = movies
+            self.moviesTableView.reloadData()
         }
         
         // Do any additional setup after loading the view.
@@ -59,7 +60,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return self.movies.count
     }
     
     
@@ -70,8 +71,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = moviesTableView.dequeueReusableCell(
             withIdentifier: "MovieCell",
             for: indexPath
-        )
-        cell.textLabel!.text = "row\(indexPath.row)"
+        ) as! MovieTableViewCell
+
+        cell.from(self.movies[indexPath.row])
         return cell
     }
 
