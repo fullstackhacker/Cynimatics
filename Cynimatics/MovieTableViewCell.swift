@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 
 class MovieTableViewCell: UITableViewCell {
     
@@ -17,6 +18,7 @@ class MovieTableViewCell: UITableViewCell {
     func from(_ movie: Movie) -> Void {
         titleLabel.text! = movie.title
         overviewLabel.text! = movie.overview
+        moviePosterImageView.setImageWith(movie.posterPath)
     }
     
     override func awakeFromNib() {

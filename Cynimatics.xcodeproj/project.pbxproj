@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		159952ABCB39125AF2A1AA68 /* Pods_CynimaticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E873443725705FAE073508B /* Pods_CynimaticsUITests.framework */; };
+		2CCE4E7A4701E3AD15B9F823 /* Pods_Cynimatics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6765E2538318337690F2E9A7 /* Pods_Cynimatics.framework */; };
 		450D118C1F6A615900E8C605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D118B1F6A615900E8C605 /* AppDelegate.swift */; };
 		450D11911F6A615900E8C605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450D118F1F6A615900E8C605 /* Main.storyboard */; };
 		450D11931F6A615900E8C605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450D11921F6A615900E8C605 /* Assets.xcassets */; };
@@ -17,6 +19,7 @@
 		450D11BE1F6A6DD000E8C605 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11BD1F6A6DD000E8C605 /* Movie.swift */; };
 		450D11C01F6A71FA00E8C605 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 450D11BF1F6A71FA00E8C605 /* README.md */; };
 		457D082D1F6B966B00C861FD /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D082C1F6B966B00C861FD /* MovieTableViewCell.swift */; };
+		CF11C71FDF9F8AD3A935AF95 /* Pods_CynimaticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89A907F8E14D75AF47D8E2C /* Pods_CynimaticsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16B57373465D80423FDD6DBA /* Pods-CynimaticsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CynimaticsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CynimaticsTests/Pods-CynimaticsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C477398D966B8953EDE2939 /* Pods-CynimaticsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CynimaticsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CynimaticsUITests/Pods-CynimaticsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3E873443725705FAE073508B /* Pods_CynimaticsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CynimaticsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		450D11881F6A615900E8C605 /* Cynimatics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cynimatics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450D118B1F6A615900E8C605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		450D11901F6A615900E8C605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +59,12 @@
 		450D11BD1F6A6DD000E8C605 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		450D11BF1F6A71FA00E8C605 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		457D082C1F6B966B00C861FD /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		5D7BE9D3CBC82594697AE8E3 /* Pods-CynimaticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CynimaticsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CynimaticsTests/Pods-CynimaticsTests.release.xcconfig"; sourceTree = "<group>"; };
+		6765E2538318337690F2E9A7 /* Pods_Cynimatics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cynimatics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A7D8FE0AFF0610DA017FE01 /* Pods-Cynimatics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cynimatics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cynimatics/Pods-Cynimatics.release.xcconfig"; sourceTree = "<group>"; };
+		9DD2D001D34D1E68BF3C9279 /* Pods-CynimaticsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CynimaticsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CynimaticsUITests/Pods-CynimaticsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8D532FFFCD4916CD76C7F0C /* Pods-Cynimatics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cynimatics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cynimatics/Pods-Cynimatics.debug.xcconfig"; sourceTree = "<group>"; };
+		D89A907F8E14D75AF47D8E2C /* Pods_CynimaticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CynimaticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCE4E7A4701E3AD15B9F823 /* Pods_Cynimatics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF11C71FDF9F8AD3A935AF95 /* Pods_CynimaticsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159952ABCB39125AF2A1AA68 /* Pods_CynimaticsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +103,8 @@
 				450D119F1F6A615900E8C605 /* CynimaticsTests */,
 				450D11AA1F6A615900E8C605 /* CynimaticsUITests */,
 				450D11891F6A615900E8C605 /* Products */,
+				816DCE2DBC1F9192D65A6984 /* Pods */,
+				B10DF81C4DD8465B8200BF45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +175,29 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		816DCE2DBC1F9192D65A6984 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8D532FFFCD4916CD76C7F0C /* Pods-Cynimatics.debug.xcconfig */,
+				7A7D8FE0AFF0610DA017FE01 /* Pods-Cynimatics.release.xcconfig */,
+				16B57373465D80423FDD6DBA /* Pods-CynimaticsTests.debug.xcconfig */,
+				5D7BE9D3CBC82594697AE8E3 /* Pods-CynimaticsTests.release.xcconfig */,
+				9DD2D001D34D1E68BF3C9279 /* Pods-CynimaticsUITests.debug.xcconfig */,
+				2C477398D966B8953EDE2939 /* Pods-CynimaticsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B10DF81C4DD8465B8200BF45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6765E2538318337690F2E9A7 /* Pods_Cynimatics.framework */,
+				D89A907F8E14D75AF47D8E2C /* Pods_CynimaticsTests.framework */,
+				3E873443725705FAE073508B /* Pods_CynimaticsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 450D11B01F6A615900E8C605 /* Build configuration list for PBXNativeTarget "Cynimatics" */;
 			buildPhases = (
+				80527D7ECD9B1B93CC5E1874 /* [CP] Check Pods Manifest.lock */,
 				450D11841F6A615900E8C605 /* Sources */,
 				450D11851F6A615900E8C605 /* Frameworks */,
 				450D11861F6A615900E8C605 /* Resources */,
+				91415F688821FD4182C7A18A /* [CP] Embed Pods Frameworks */,
+				1152793917EE6CD2C8C3D18D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 450D11B31F6A615900E8C605 /* Build configuration list for PBXNativeTarget "CynimaticsTests" */;
 			buildPhases = (
+				82FB58CD5B23698BC49E6EA8 /* [CP] Check Pods Manifest.lock */,
 				450D11981F6A615900E8C605 /* Sources */,
 				450D11991F6A615900E8C605 /* Frameworks */,
 				450D119A1F6A615900E8C605 /* Resources */,
+				6F6DCDB6E77405737A57A89B /* [CP] Embed Pods Frameworks */,
+				73A18105B83B46E48120BDBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 450D11B61F6A615900E8C605 /* Build configuration list for PBXNativeTarget "CynimaticsUITests" */;
 			buildPhases = (
+				B9A2A484B023990649C4182D /* [CP] Check Pods Manifest.lock */,
 				450D11A31F6A615900E8C605 /* Sources */,
 				450D11A41F6A615900E8C605 /* Frameworks */,
 				450D11A51F6A615900E8C605 /* Resources */,
+				00789885D6DB62DAB44CBBDB /* [CP] Embed Pods Frameworks */,
+				C9285FAC7555937782448486 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +335,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00789885D6DB62DAB44CBBDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CynimaticsUITests/Pods-CynimaticsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1152793917EE6CD2C8C3D18D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cynimatics/Pods-Cynimatics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F6DCDB6E77405737A57A89B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CynimaticsTests/Pods-CynimaticsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73A18105B83B46E48120BDBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CynimaticsTests/Pods-CynimaticsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80527D7ECD9B1B93CC5E1874 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cynimatics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82FB58CD5B23698BC49E6EA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CynimaticsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91415F688821FD4182C7A18A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cynimatics/Pods-Cynimatics-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cynimatics/Pods-Cynimatics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9A2A484B023990649C4182D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CynimaticsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9285FAC7555937782448486 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CynimaticsUITests/Pods-CynimaticsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		450D11841F6A615900E8C605 /* Sources */ = {
@@ -446,6 +645,7 @@
 		};
 		450D11B11F6A615900E8C605 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8D532FFFCD4916CD76C7F0C /* Pods-Cynimatics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cynimatics/Info.plist;
@@ -458,6 +658,7 @@
 		};
 		450D11B21F6A615900E8C605 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A7D8FE0AFF0610DA017FE01 /* Pods-Cynimatics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cynimatics/Info.plist;
@@ -470,6 +671,7 @@
 		};
 		450D11B41F6A615900E8C605 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B57373465D80423FDD6DBA /* Pods-CynimaticsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +686,7 @@
 		};
 		450D11B51F6A615900E8C605 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D7BE9D3CBC82594697AE8E3 /* Pods-CynimaticsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +701,7 @@
 		};
 		450D11B71F6A615900E8C605 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD2D001D34D1E68BF3C9279 /* Pods-CynimaticsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CynimaticsUITests/Info.plist;
@@ -511,6 +715,7 @@
 		};
 		450D11B81F6A615900E8C605 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C477398D966B8953EDE2939 /* Pods-CynimaticsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CynimaticsUITests/Info.plist;
