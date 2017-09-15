@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -24,8 +25,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             delegateQueue: OperationQueue.main
         )
         
+        
         let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, err) in
             if let data = data {
+                MBProgressHUD.hide(for: self.view, animated: true)
                 if let responseDict = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                     if let moviesList = responseDict["results"] as? [NSDictionary] {
                         let movies = moviesList.map({ (movieDict) -> Movie in
@@ -53,7 +56,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         moviesTableView.dataSource = self
         moviesTableView.delegate = self
-
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
         fetchNowPlayingMovies { (movies) in
             self.movies = movies
             self.moviesTableView.reloadData()

@@ -7,6 +7,7 @@ target 'Cynimatics' do
 
   # Pods for Cynimatics
   pod 'AFNetworking'
+  pod 'MBProgressHUD'
 
   target 'CynimaticsTests' do
     inherit! :search_paths
