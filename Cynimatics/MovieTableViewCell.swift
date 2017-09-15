@@ -21,7 +21,20 @@ class MovieTableViewCell: UITableViewCell {
         self.movie = movie
         titleLabel.text! = movie.title
         overviewLabel.text! = movie.overview
-        moviePosterImageView.setImageWith(movie.posterPath)
+        
+        let moviePosterRequest: URLRequest = URLRequest(url: movie.posterPath)
+        moviePosterImageView.setImageWith(moviePosterRequest, placeholderImage: nil, success: { (moviePosterRequest, moviePosterResponse, moviePoster) in
+            if moviePosterResponse != nil {
+                self.moviePosterImageView.alpha = 0.0
+                self.moviePosterImageView.image = moviePoster
+                
+                UIView.animate(withDuration: 0.3, animations: { 
+                    self.moviePosterImageView.alpha = 1.0
+                })
+            }
+        }) { (moviePosterRequst, moviePosterResponse, error) in
+            print(error)
+        }
     }
     
     override func awakeFromNib() {

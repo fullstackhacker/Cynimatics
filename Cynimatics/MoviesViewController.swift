@@ -12,6 +12,7 @@ import MBProgressHUD
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var moviesTableView: UITableView!
+    @IBOutlet weak var networkErrorLabel: UILabel!
     
     var movies: [Movie] = []
     
@@ -27,14 +28,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         
         let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, err) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            if err != nil {
+                self.networkErrorLabel.isHidden = false
+                return next([])
+            }
+            
             if let data = data {
-                MBProgressHUD.hide(for: self.view, animated: true)
                 if let responseDict = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                     if let moviesList = responseDict["results"] as? [NSDictionary] {
                         let movies = moviesList.map({ (movieDict) -> Movie in
                             return Movie(from: movieDict)
                         })
-                        next(movies)
+                        return next(movies)
                     }
                 }
                 
