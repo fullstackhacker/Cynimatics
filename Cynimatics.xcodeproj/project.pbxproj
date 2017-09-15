@@ -18,6 +18,7 @@
 		450D11BA1F6A623000E8C605 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11B91F6A623000E8C605 /* MoviesViewController.swift */; };
 		450D11BE1F6A6DD000E8C605 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D11BD1F6A6DD000E8C605 /* Movie.swift */; };
 		450D11C01F6A71FA00E8C605 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 450D11BF1F6A71FA00E8C605 /* README.md */; };
+		456BDA621F6BAB5400BDA8EB /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456BDA611F6BAB5400BDA8EB /* MovieViewController.swift */; };
 		457D082D1F6B966B00C861FD /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D082C1F6B966B00C861FD /* MovieTableViewCell.swift */; };
 		CF11C71FDF9F8AD3A935AF95 /* Pods_CynimaticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89A907F8E14D75AF47D8E2C /* Pods_CynimaticsTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		450D11B91F6A623000E8C605 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		450D11BD1F6A6DD000E8C605 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		450D11BF1F6A71FA00E8C605 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		456BDA611F6BAB5400BDA8EB /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		457D082C1F6B966B00C861FD /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		5D7BE9D3CBC82594697AE8E3 /* Pods-CynimaticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CynimaticsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CynimaticsTests/Pods-CynimaticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6765E2538318337690F2E9A7 /* Pods_Cynimatics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cynimatics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				450D11B91F6A623000E8C605 /* MoviesViewController.swift */,
+				456BDA611F6BAB5400BDA8EB /* MovieViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				450D11BA1F6A623000E8C605 /* MoviesViewController.swift in Sources */,
 				450D11C01F6A71FA00E8C605 /* README.md in Sources */,
 				450D11BE1F6A6DD000E8C605 /* Movie.swift in Sources */,
+				456BDA621F6BAB5400BDA8EB /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

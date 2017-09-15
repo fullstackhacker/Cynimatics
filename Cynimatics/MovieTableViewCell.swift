@@ -11,11 +11,14 @@ import AFNetworking
 
 class MovieTableViewCell: UITableViewCell {
     
+    var movie: Movie!
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var moviePosterImageView: UIImageView!
     
     func from(_ movie: Movie) -> Void {
+        self.movie = movie
         titleLabel.text! = movie.title
         overviewLabel.text! = movie.overview
         moviePosterImageView.setImageWith(movie.posterPath)

@@ -43,6 +43,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(
+            self,
+            action: #selector(refreshControlAction(_:)),
+            for: UIControlEvents.valueChanged
+        )
+        moviesTableView.insertSubview(refreshControl, at: 0)
+        
         moviesTableView.dataSource = self
         moviesTableView.delegate = self
 
@@ -52,6 +60,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        fetchNowPlayingMovies { (movies) in
+            self.movies = movies
+            self.moviesTableView.reloadData()
+            refreshControl.endRefreshing()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,14 +94,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let movieCell = sender as! MovieTableViewCell
+        let movieViewController = segue.destination as! MovieViewController
+        movieViewController.movie = movieCell.movie
+        
     }
-    */
+    
 
 }
