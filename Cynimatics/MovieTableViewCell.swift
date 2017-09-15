@@ -16,7 +16,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var moviePosterImageView: UIImageView!
-    
+
     func from(_ movie: Movie) -> Void {
         self.movie = movie
         titleLabel.text! = movie.title

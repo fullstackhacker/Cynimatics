@@ -94,6 +94,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             for: indexPath
         ) as! MovieTableViewCell
 
+        cell.selectionStyle = .none
         cell.from(self.movies[indexPath.row])
         return cell
     }
