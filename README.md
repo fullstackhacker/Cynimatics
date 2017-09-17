@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 - [ ] Implement segmented control to switch between list view and grid view.
 - [ ] Add a search bar.
 - [x] All images fade in.
-- [ ] For the large poster, load the low-res image first, switch to high-res when complete.
+- [x] For the large poster, load the low-res image first, switch to high-res when complete.
 - [x] Customize the highlight and selection effect of the cell.
 - [x] Customize the navigation bar.
 
@@ -46,7 +46,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2017] [Mushaheed Kapadia]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

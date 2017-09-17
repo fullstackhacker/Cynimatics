@@ -21,9 +21,45 @@ class MovieViewController: UIViewController {
         
         titleLabel.text = movie.title
         overviewLabel.text = movie.overview
-        posterImageView.setImageWith(movie.posterPath)
 
+        let lowResolutionPosterRequest: URLRequest = URLRequest(url: movie.lowResolutionPosterPath)
+
+        posterImageView.setImageWith(
+            lowResolutionPosterRequest,
+            placeholderImage: nil,
+            success: { (lowResolutionPosterRequest, lowResolutionPosterResponse, lowResolutionPoster) in
+                if lowResolutionPosterResponse != nil {
+                    self.posterImageView.alpha = 0.0
+                    self.posterImageView.image = lowResolutionPoster
+
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.posterImageView.alpha = 1.0
+                    }, completion: { (success) -> Void in
+                        self.fetchAndSetHighResolutionPoster(lowResolutionPoster: lowResolutionPoster)})
+                }
+                else {
+                    self.posterImageView.image = lowResolutionPoster
+                    self.fetchAndSetHighResolutionPoster(lowResolutionPoster: lowResolutionPoster)
+                }
+        }) { (errorRequest, errorResponse, error) in
+            print(error)
+        }
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func fetchAndSetHighResolutionPoster (lowResolutionPoster: UIImage) -> Void {
+        
+        let highResolutionPosterRequest: URLRequest = URLRequest(url: movie.highResolutionPosterPath)
+
+        self.posterImageView.setImageWith(
+            highResolutionPosterRequest,
+            placeholderImage: lowResolutionPoster,
+            success: { (highResolutionPosterRequest, highResolutionPosterResponse, highResolutionPoster) in
+                self.posterImageView.image = highResolutionPoster
+        }, failure: { (errorRequest, errorResponse, error) in
+            print(error)
+        })
     }
 
     override func didReceiveMemoryWarning() {
