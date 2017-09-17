@@ -21,9 +21,13 @@ class MovieTableViewCell: UITableViewCell {
         self.movie = movie
         titleLabel.text! = movie.title
         overviewLabel.text! = movie.overview
+        self.moviePosterImageView.image = nil
         
         let moviePosterRequest: URLRequest = URLRequest(url: movie.posterPath)
-        moviePosterImageView.setImageWith(moviePosterRequest, placeholderImage: nil, success: { (moviePosterRequest, moviePosterResponse, moviePoster) in
+        moviePosterImageView.setImageWith(
+            moviePosterRequest,
+            placeholderImage: nil,
+            success: { (moviePosterRequest, moviePosterResponse, moviePoster) in
             if moviePosterResponse != nil {
                 self.moviePosterImageView.alpha = 0.0
                 self.moviePosterImageView.image = moviePoster
@@ -31,6 +35,9 @@ class MovieTableViewCell: UITableViewCell {
                 UIView.animate(withDuration: 0.3, animations: { 
                     self.moviePosterImageView.alpha = 1.0
                 })
+            }
+            else {
+                self.moviePosterImageView.image = moviePoster
             }
         }) { (moviePosterRequst, moviePosterResponse, error) in
             print(error)

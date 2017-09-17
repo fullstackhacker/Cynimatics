@@ -12,8 +12,8 @@ import MBProgressHUD
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var moviesTableView: UITableView!
-    @IBOutlet weak var networkErrorLabel: UILabel!
-    
+    @IBOutlet weak var networkErrorView: UIView!
+
     var movies: [Movie] = []
     
     func fetchNowPlayingMovies(next: @escaping (([Movie]) -> Void)) {
@@ -31,11 +31,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             MBProgressHUD.hide(for: self.view, animated: true)
             
             if err != nil {
-                self.networkErrorLabel.isHidden = false
+                self.networkErrorView.isHidden = false
+                self.networkErrorView.setNeedsDisplay()
                 return next([])
             }
             
             if let data = data {
+                self.networkErrorView.isHidden = true
+                self.networkErrorView.setNeedsDisplay()
                 if let responseDict = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                     if let moviesList = responseDict["results"] as? [NSDictionary] {
                         let movies = moviesList.map({ (movieDict) -> Movie in
