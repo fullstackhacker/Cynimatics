@@ -12,13 +12,16 @@ import MBProgressHUD
 let nowPlayingState: String = "nowPlaying"
 let topRatedState: String = "topRated"
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     
     @IBOutlet weak var moviesTableView: UITableView!
     @IBOutlet weak var networkErrorView: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
+    var searchActive: Bool = false
     var movies: [Movie] = []
+    var filteredMovies: [Movie] = []
     var movieSet: String = nowPlayingState
 
     func fetchMoviesFunc(next: @escaping (([Movie]) ->Void)) {
@@ -78,6 +81,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         task.resume()
     }
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,11 +96,13 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         moviesTableView.dataSource = self
         moviesTableView.delegate = self
+        searchBar.delegate = self
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         self.fetchMoviesFunc(next: { (movies) in
             self.movies = movies
+            self.filteredMovies = movies
             self.moviesTableView.reloadData()
         })
         
@@ -105,6 +112,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         self.fetchMoviesFunc { (movies) in
             self.movies = movies
+            self.filteredMovies = movies
             self.moviesTableView.reloadData()
             refreshControl.endRefreshing()
         }
@@ -116,7 +124,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.movies.count
+        if searchActive {
+            return self.filteredMovies.count
+        }
+        else {
+            return self.movies.count
+        }
     }
     
     
@@ -130,8 +143,37 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         ) as! MovieTableViewCell
 
         cell.selectionStyle = .none
-        cell.from(self.movies[indexPath.row])
+        var movie: Movie = self.movies[indexPath.row]
+        if searchActive {
+            movie = self.filteredMovies[indexPath.row]
+        }
+        cell.from(movie)
         return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.filteredMovies = self.movies.filter({ (movie) -> Bool in
+            let range = movie.title.range(of: searchText)
+            return range != nil
+        })
+        searchActive = self.filteredMovies.count > 0
+        self.moviesTableView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
     }
 
 
