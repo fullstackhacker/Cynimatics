@@ -9,16 +9,34 @@
 import UIKit
 import MBProgressHUD
 
+let nowPlayingState: String = "nowPlaying"
+let topRatedState: String = "topRated"
+
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    
     @IBOutlet weak var moviesTableView: UITableView!
     @IBOutlet weak var networkErrorView: UIView!
 
     var movies: [Movie] = []
+    var movieSet: String = nowPlayingState
+
+    
     
     func fetchNowPlayingMovies(next: @escaping (([Movie]) -> Void)) {
+        let url: String = "https://api.themoviedb.org/3/movie/now_playing"
+        return fetchMovies(baseUrl: url, next: next)
+    }
+    
+    func fetchTopRatedMovies(next: @escaping (([Movie]) -> Void)) {
+        let url: String = "https://api.themoviedb.org/3/movie/top_rated"
+        return fetchMovies(baseUrl: url, next: next)
+    }
+
+    
+    func fetchMovies(baseUrl: String, next:  @escaping (([Movie]) -> Void)) {
         let apiKey: String = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url: URL = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
+        let url: URL = URL(string: "\(baseUrl)?api_key=\(apiKey)")!
         let request: URLRequest = URLRequest(url: url)
         let session: URLSession = URLSession(
             configuration: URLSessionConfiguration.default,
@@ -69,19 +87,35 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        fetchNowPlayingMovies { (movies) in
-            self.movies = movies
-            self.moviesTableView.reloadData()
+        if self.movieSet == nowPlayingState {
+            self.fetchNowPlayingMovies(next: { (movies) in
+                self.movies = movies
+                self.moviesTableView.reloadData()
+            })
         }
+        else {
+            self.fetchTopRatedMovies(next: { (movies) in
+                self.movies = movies
+                self.moviesTableView.reloadData()
+            })
+        }
+
         
         // Do any additional setup after loading the view.
     }
     
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
-        fetchNowPlayingMovies { (movies) in
-            self.movies = movies
-            self.moviesTableView.reloadData()
-            refreshControl.endRefreshing()
+        if self.movieSet == nowPlayingState {
+            self.fetchNowPlayingMovies(next: { (movies) in
+                self.movies = movies
+                self.moviesTableView.reloadData()
+            })
+        }
+        else {
+            self.fetchTopRatedMovies(next: { (movies) in
+                self.movies = movies
+                self.moviesTableView.reloadData()
+            })
         }
     }
 
