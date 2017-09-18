@@ -21,8 +21,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     var movies: [Movie] = []
     var movieSet: String = nowPlayingState
 
-    
-    
+    func fetchMoviesFunc(next: @escaping (([Movie]) ->Void)) {
+        if self.movieSet == nowPlayingState {
+            return fetchNowPlayingMovies(next: next)
+        }
+        else {
+            return fetchTopRatedMovies(next: next)
+        }
+    }
+
     func fetchNowPlayingMovies(next: @escaping (([Movie]) -> Void)) {
         let url: String = "https://api.themoviedb.org/3/movie/now_playing"
         return fetchMovies(baseUrl: url, next: next)
@@ -87,35 +94,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        if self.movieSet == nowPlayingState {
-            self.fetchNowPlayingMovies(next: { (movies) in
-                self.movies = movies
-                self.moviesTableView.reloadData()
-            })
-        }
-        else {
-            self.fetchTopRatedMovies(next: { (movies) in
-                self.movies = movies
-                self.moviesTableView.reloadData()
-            })
-        }
-
+        self.fetchMoviesFunc(next: { (movies) in
+            self.movies = movies
+            self.moviesTableView.reloadData()
+        })
         
         // Do any additional setup after loading the view.
     }
     
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
-        if self.movieSet == nowPlayingState {
-            self.fetchNowPlayingMovies(next: { (movies) in
-                self.movies = movies
-                self.moviesTableView.reloadData()
-            })
-        }
-        else {
-            self.fetchTopRatedMovies(next: { (movies) in
-                self.movies = movies
-                self.moviesTableView.reloadData()
-            })
+        self.fetchMoviesFunc { (movies) in
+            self.movies = movies
+            self.moviesTableView.reloadData()
+            refreshControl.endRefreshing()
         }
     }
 
